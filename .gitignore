@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/sfml
+/ITI_Math/ITI_Math.vcxproj.filters
+/ITI_Math/ITI_Math.vcxproj
