@@ -5,11 +5,11 @@
 void updateArc(sf::ConvexShape& shape, const sf::Vector2f& center, float radius, float startAngle, float endAngle)
 {
     int pointCount = shape.getPointCount();
-    shape.setPoint(0, center);
-    for (int i = 1; i < pointCount; i++)
+    for (int i = 0; i < pointCount-1; i++)
     {
-        shape.setPoint(i, sf::Vector2f(center.x + radius * cos(i * (endAngle - startAngle) / (pointCount - 1) + startAngle), center.y + radius * sin(i * (endAngle - startAngle) / (pointCount - 1) + startAngle)));
+        shape.setPoint(i, sf::Vector2f(center.x + radius * cos(i * (endAngle - startAngle) / (pointCount -2) + startAngle), center.y + radius * sin(i * (endAngle - startAngle) / (pointCount - 2) + startAngle)));
     }
+    shape.setPoint(pointCount-1, center);
 }
 
 int main()
